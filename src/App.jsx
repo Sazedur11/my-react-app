@@ -3,13 +3,13 @@ import Counter from "./CounterNum";
 import Counter2 from "./Counter2";
 import handleClick from "./Doya";
 import Todo from "./Todo";
-import Team from "./team";
+import Teams from "./Teams";
 
 function App() {
   return (
     <>
       <h1>Vite + React</h1>
-      <Team></Team>
+      <Teams></Teams>
       <Counter2></Counter2>
       <Counter></Counter>
       <Todo task="Learn React"></Todo>

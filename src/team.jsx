@@ -1,18 +1,11 @@
-import { useEffect, useState } from "react"
-
-export default function Team(){
-
-    const [teamMembers, setTeamMembers] = useState([]);
-
-    useEffect(()=>{
-        fetch('https://jsonplaceholder.typicode.com/users')
-        .then(res => res.json())
-        .then(data => setTeamMembers(data))
-    },[])
-
+export default function Team({team}){
+    const {name, email, phone, website} = team;
     return(
-        <div>
-            <h2>Team Members: {teamMembers.length}</h2>
+        <div className="team-box">
+            <h3>NAme: {name}</h3>
+            <p>Email: {email}</p>
+            <p>Phone: {phone}</p>
+            <p>Website: {website}</p>
         </div>
     )
 }
